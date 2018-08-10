@@ -41,7 +41,14 @@ class ImageMaker {
 
         // TODO: Select the `input` element with the `name` attribute "bottomText"
         this.bottomTextInput = document.querySelector('input[name="bottomText"]');
-
+        
+        // TODO: create a new `<p>` element called `this.textColor`
+        this.textColor = document.createElement ('p');
+        this.textColor.setAttribute('class', 'text-color');
+        // TODO: Append `this.textColor` as a child element to `this.imagePreview`
+        this.imagePreview.appendChild(this.textColor);
+        // TODO: Select the `input` element with the `name` attribute "textColor"
+        this.textColorInput = document.querySelector('input[name="textColor"]');
         // NOTE: If you add additional form fields to modify other aspects of
         // the image, then you will need to make attributes for each of those
         // elements here.
@@ -59,6 +66,7 @@ class ImageMaker {
         this.topText.innerHTML = this.topTextInput.value;
         // TODO: Update the `innerHTML` of `this.bottomText`
         this.bottomText.innerHTML = this.bottomTextInput.value;
+       
 
     }
     downloadImage(){
